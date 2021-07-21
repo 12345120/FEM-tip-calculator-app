@@ -1,0 +1,219 @@
+:root {
+    --small-border-radius: 10px;
+    --font: 'Space Mono', monospace;
+}
+
+// HTML ELEMTS
+body {
+    background-color: hsla(172, 67%, 45%, 0.3);
+    text-align: center;
+    font-family: var(--font);
+}
+
+h1, h2, h3, p, div, span, button {
+    padding: 0;
+    margin: 0;
+}
+
+
+// CSS PROPERTIES 
+.logo {
+    margin: 150px auto 90px;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    margin: auto;
+    width: calc(max(45%, 900px)); 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    
+    @media only screen and (max-width:900px) {
+        flex-direction: column;
+        width: calc(max(45%, 380px));
+    }
+    
+    .left-pannel {
+        flex: 1 0 200px;
+        margin: 35px 60px 35px 35px;
+        
+        
+        .category-text {
+            font-size: 15px;
+            color: hsl(186, 14%, 43%);
+        }
+        
+        .number-shower {
+            margin-top: 10px;
+            background-color: hsla(185, 41%, 84%, 0.4);
+            border-radius: var(--small-border-radius);
+            display: flex;
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            justify-content: space-between;
+            color: hsla(186, 14%, 43%, 0.5);
+            
+            .number {
+                text-align: right;
+                width: 200px;
+                border: 0;
+                background-color: transparent;
+                font-family: var(--font);
+                font-size: 24px;
+                color: hsla(186, 14%, 43%, 0.8);
+                outline: 0;
+            }
+            
+        }
+    }
+    
+    .right-pannel {
+        flex: 1 0 200px;
+        margin: 35px 35px 35px 0px;
+        padding: 40px 30px 30px 30px;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 20px;
+        position: relative;
+        
+        @media only screen and (max-width:900px) {
+            margin-inline: 0;
+            margin-bottom: 0;
+            & .divide-box + .divide-box {
+                margin-bottom: 100px;
+            }
+        }
+        
+        .category-text {
+            font-size: 20px;
+            color: hsl(189, 41%, 97%);
+        }
+        
+        p {
+            color: hsl(184, 14%, 56%);
+        }
+        
+        .divide-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            
+            .number {
+                color: hsl(172, 67%, 45%);
+                font-size: 3rem;
+            }
+        }
+        
+        .reset-button-wrapper{
+            display: flex;
+            justify-content: center;
+            
+            .reset-button {
+                position: absolute;
+                bottom: 35px;
+                border: 0px;
+                border-radius: var(--small-border-radius);
+                padding: 15px 0 15px;
+                width: 80%;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+.bill {
+    margin-bottom: 50px;
+}
+
+.tip {
+    margin-bottom: 50px;
+    
+    .tip-buttons {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        gap: 1rem;
+    }
+    
+    .tip-button {
+        border-radius: var(--small-border-radius);
+        padding: 9px 0 9px;
+        border: 0px;
+        
+        &:hover {
+            background-color: hsla(172, 67%, 45%, 1);
+        }
+    }
+    
+    .custom-tip-button {
+        border-radius: var(--small-border-radius);
+        background-color: hsla(184, 14%, 56%, 0.08);
+        border: 0px;
+        color: hsl(186, 14%, 43%);
+    }
+    
+    .custom-tip-input {
+        text-align: center;
+        width: 110px;
+        border: 0;
+        background-color: transparent;
+        font-family: var(--font);
+        font-size: 24px;
+        color: hsla(186, 14%, 43%, 0.8);
+        outline: 0;
+        font-weight: bold;
+    }
+}
+
+
+
+/* 
+STATES 
+*/
+
+// number-showers: folcus
+.number-shower-focused {
+    outline: 2px solid hsl(172, 67%, 35%);
+}
+
+// number-showersL: invalid input
+.number-shower-invalid-input {
+    outline: 2px solid red;
+}
+
+// tip-button clicked
+.tip-button-clicked {
+    background-color: hsla(172, 67%, 45%, 1);
+    color: hsl(183, 100%, 15%);
+}
+// tip-butotn unclicked
+.tip-button-unclicked {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+}
+
+
+
+.reset-button-off {
+    background-color: hsla(172, 67%, 45%, 0.4);
+    color: hsla(183, 100%, 15%, 0.65);
+    opacity: .5;
+}
+.reset-button-on {
+    background-color: hsla(172, 67%, 45%, 1);
+    color: hsl(183, 100%, 15%);
+    opacity: 1;
+}
+
+
+
+
+// TODO: 
+// 2) Tip Amount & / person & Total & / person shrinks --> restrict that 
+// 3) Custom overflow not dealt with
+

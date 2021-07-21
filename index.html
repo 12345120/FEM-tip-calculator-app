@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css\style.css">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <img class="logo" src="./images/logo.svg" alt="">
+
+  <div class="container">
+    <span class="left-pannel">
+      <div class="bill">
+        <h1 class="category-text">Bill</h1>
+        <div class="number-shower dollars">
+          <img src="./images/icon-dollar.svg" alt="dollar">
+          <input type="text" class="number" placeholder="0">
+        </div>
+      </div>
+
+      <div class="tip">
+        <h1 class="category-text">Select Tip %</h1>
+        <div class="tip-buttons">
+          <button class="tip-button tip-button-unclicked">
+            <h2 class="tip-percent">5%</h2>
+          </button>
+          <button class="tip-button tip-button-unclicked">
+            <h2 class="tip-percent">10%</h2>
+          </button>
+          <button class="tip-button tip-button-unclicked">
+            <h2 class="tip-percent">15%</h2>
+          </button>
+          <button class="tip-button tip-button-unclicked">
+            <h2 class="tip-percent">25%</h2>
+          </button>
+          <button class="tip-button tip-button-unclicked">
+            <h2 class="tip-percent">50%</h2>
+          </button>
+          <button class="custom-tip-button">
+            <input type="text" class="custom-tip-input" placeholder="Custom">
+          </button>
+        </div>
+      </div>
+
+      <div class="people">
+        <h1 class="category-text">Number of People</h1>
+        <div class="number-shower people">
+          <img src="./images/icon-person.svg" alt="person">
+          <input type="text" class="number" placeholder="0">
+        </div>
+      </div>
+    </span>
+
+    <span class="right-pannel">
+      <span class="divide-box">
+        <span class="divide-text">
+          <h1 class="category-text">Tip Amount</h1>
+          <p>/ person</p>
+        </span>
+        <h2 class="number">$0.00</h2>
+      </span>
+
+
+      <span class="divide-box">
+        <span class="divide-text">
+          <h1 class="category-text">Total</h1>
+          <p>/ person</p>
+        </span>
+        <h2 class="number">$0.00</h2>
+      </span>
+
+      <div class="reset-button-wrapper">
+        <button class="reset-button reset-button-off">RESET</button>
+      </div>
+    </span>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+  <!-- TODO: enable index.js you imported -->
+</body>
+
+</html>
